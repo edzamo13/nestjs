@@ -33,5 +33,6 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
-*.env
+# Agrego el Track para variables de entorno
+.env
 /postgres_data
