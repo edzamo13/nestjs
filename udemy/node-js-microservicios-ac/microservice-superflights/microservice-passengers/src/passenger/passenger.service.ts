@@ -17,6 +17,7 @@ export class PassengerService {
   }
 
   async findAll(): Promise<IPassenger[]> {
+    console.log('findAll');
     return this.model.find();
   }
 

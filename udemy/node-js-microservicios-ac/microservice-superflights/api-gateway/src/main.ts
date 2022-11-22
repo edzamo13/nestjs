@@ -15,7 +15,7 @@ async function bootstrap() {
     .setTitle('SuperFlight')
     .setDescription('Scheduled flight App')
     .setVersion('2.0.0')
-    //  .addBearerAuth() //usar con swagger
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('/api/docs', app, document, {

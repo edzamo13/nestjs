@@ -6,15 +6,18 @@ import {
   Param,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Observable } from 'rxjs';
+import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { PassengerMSG } from 'src/common/constants';
 import { IPassenger } from 'src/common/interfaces/passenger.interfaces';
 import { ClientProxySuperFlights } from 'src/common/proxy/client-proxy';
 import { PassengerDto } from './dto/passenger.dto';
 
 @ApiTags('passengers')
+@UseGuards(JwtAuthGuard)
 @Controller('api/v2/passenger')
 export class PassengerController {
   constructor(private readonly clientProxy: ClientProxySuperFlights) {}
@@ -28,8 +31,6 @@ export class PassengerController {
 
   @Get()
   getAll(): Observable<IPassenger[]> {
-    console.log('******');
-
     return this._clientProxyPassenger.send(PassengerMSG.FIND_ALL, '');
   }
 

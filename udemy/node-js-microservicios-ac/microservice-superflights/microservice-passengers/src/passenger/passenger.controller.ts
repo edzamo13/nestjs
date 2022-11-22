@@ -15,8 +15,6 @@ export class PassengerController {
 
   @MessagePattern(PassengerMSG.FIND_ALL)
   findAll() {
-    console.log('micro!...');
-
     return this.passengerService.findAll();
   }
 

@@ -104,4 +104,8 @@ add en module
     https://www.cloudamqp.com/
 ## Swagger
 
-npm i --save swagger-ui-express 
+    - npm i --save swagger-ui-express 
+    - npm i @nestjs/jwt passport-jwt   @nestjs/passport passport passport-local
+
+    - npm install --save @nestjs/passport passport passport-local
+    - npm install --save-dev @types/passport-local
