@@ -106,7 +106,7 @@ Nest is [MIT licensed](LICENSE).
 
 mogosee
 
-      npm i --saves mogoose
+      npm i --save mogoose
       npm i --save mongoose-autopopulate
       npm i --save @nestjs/mongoose
 
