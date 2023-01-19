@@ -71,3 +71,26 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Kafka
+
+You need create a topic name = massive-topic. I Share docker compose kafka 
+https://developer.confluent.io/quickstart/kafka-docker/
+ 
+ ### Command docker 
+
+      Kafka
+
+      docker exec -it kafka /bin/bash 
+
+
+      kafka-topics —version
+
+      #List topics
+      kafka-topics --bootstrap-server=kafka:9092  --list
+
+      #describe topic 
+      kafka-topics --bootstrap-server=kafka:9092 --describe --topic  massive-topic 
+
+      #writting topic 
+      kafka-console-producer --bootstrap-server kafka:9092 --topic massive-topic
