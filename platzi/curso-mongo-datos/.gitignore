@@ -2,7 +2,9 @@
 /dist
 /node_modules
 /docker/mongo-db/*
-.env
+.prod.env
+.stag.env
+/mongo_data
 
 # Logs
 logs

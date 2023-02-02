@@ -3,11 +3,11 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './apis/users/users.module';
 import config from './config';
 
+import { MongoClient } from 'mongodb';
+
+
 @Module({
-  imports: [
-    MongooseModule.forRoot(config.DATABASE_URL),
-    UsersModule,
-  ],
+  imports: [MongooseModule.forRoot(config.DATABASE_URL), UsersModule],
   controllers: [],
   providers: [],
 })
