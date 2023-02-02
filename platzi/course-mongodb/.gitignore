@@ -1,7 +1,7 @@
 # compiled output
 /dist
 /node_modules
-/docker/mongo-db/*
+/docker/mongo_data/*
 .prod.env
 .stag.env
 /mongo_data
